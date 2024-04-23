@@ -111,7 +111,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         <p>Is the spot on your skin asymmetrical?</p> <!--Question that is printed-->
 		<a href="#two" onclick="cancerAdd();" class="w3-btn w3-black"> Yes</a> <!--The buttons that will calculate the probability of whether the person has skin cancer or if it is just a skin spot--> 
          	<a href="#two" onclick="spotAdd();" class="w3-btn w3-black">No</a>
-    	</div><!--content --> 
+    	</div><!-- page content --> 
 </div>
 
 <div class="page" id="two"> <!--creates new page for Question 2-->
@@ -130,12 +130,51 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div class="w3-container w3-flat-amethyst"> <!--creates orange header box-->
 		<h1>Question 3</h1> <!--displays "Question 3" as the header-->
 	</div> <!--ends header box-->
-	
 	<div id="content" class="w3-container"> <!--creates white page background-->
 	<p>Is your skin spot multicolored? </p> <!--displays Question 3 on page 3-->
          	<a href="#four"  onclick="cancerAdd();" class="w3-btn w3-black">Yes</a> <!--creates a button that runs cancerAdd() function and adds 1 to cancer count when clicked which leads to page 4-->
 		<a href="#four"  onclick="spotAdd();" class="w3-btn w3-black"> No</a> <!--creates a button that runs spotAdd() function and adds 1 to spot count when clicked which leads to page 4-->
 	</div> <!--divides page-->
+	
+<div class="page" id="four">
+
+	<div id="header" class="w3-container w3-flat-amethyst"> <!--header content-->
+		<h1>Question 4</h1>
+	</div>
+    	<div id="content" class="w3-container"> 
+        <p>Is it greater than 6mm (about the size of a pencil eraser)? </p> <!--Question that is printed-->
+		<a href="#five" onclick="cancerAdd();" class="w3-btn w3-black"> Yes</a> <!--The buttons that will calculate the probability of whether the person has skin cancer or if it is just a skin spot--> 
+         	<a href="#five" onclick="spotAdd();" class="w3-btn w3-black">No</a>
+    	</div><!--page content --> 
+
+<div class="page" id="five">
+
+	<div id="header" class="w3-container w3-flat-amethyst"> <!--header content-->
+		<h1>Question 5</h1>
+	</div>
+    	<div id="content" class="w3-container"> 
+        <p>Is it changing in shape, size, or color?</p> <!--Question that is printed-->
+		<a href="#six" onclick="cancerAdd();" class="w3-btn w3-black"> Yes</a> <!--The buttons that will calculate the probability of whether the person has skin cancer or if it is just a skin spot--> 
+         	<a href="#six" onclick="spotAdd();" class="w3-btn w3-black">No</a>
+    	</div><!-- page content --> 
+	
+<div class="page" id="six"> <!-- contains page content-->
+	<div class="w3-container w3-flat-amethyst"> <!-- contains header content -->
+		<h1>Results</h1> <!--This is what is in the header-->
+	</div>
+	<div id="content" class="w3-containter">
+		<p id="results"></p>
+		<a onclick="getResults ()" class="w3-btn w3-black">Get results</a> <!-- button that changes text when clicked --> 
+		<script> // contains javascript content for getResults function
+			function getResults () // function that makes results with probabilities appear in results paragraph
+			{
+			var cancerPercent = 100*(cancer_count/5); // variable that calculates cancer probability. Denominator is 5 since we have 5 questions. 
+			var spotPercent = 100*(spot_count/5); // variable that calculates skin spot probability
+			var resultText = document.getElementById("results"); // variable that stores results text
+			resultText. innerHTML = "Probability it is skin cacner = " + cancerPercent + "%" + "<br> Probability it is just a skin spot = " + spotPercent + "%";
+			} // text that pops up in results paragraph when you click button, added & in quotation marks to see percent symbol after number
+		</script>
+	</div>
 </div> <!--divides page-->
 	
 </div>
