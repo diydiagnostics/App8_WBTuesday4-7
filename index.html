@@ -41,18 +41,18 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-        var allergy_count = 0;
-        var cold_count = 0;
+        var cancer_count = 0;
+        var spot_count = 0;
 
 
-        function allergyAdd(){
-            allergy_count = allergy_count + 1;
-		alert(allergy_count);
+        function cancerAdd(){
+            cancer_count = cancer_count + 1;
+		alert(cancer_count);
 
         }
 
-        function coldAdd(){
-            cold_count = cold_count + 1;
+        function spotAdd(){
+            spot_count = cold_count + 1;
         }
 
   </script>
@@ -95,14 +95,17 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
-<div class="page" id="one">
-	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 1</h1>
+<div class="page" id="one"> <!-- contains page content--> 
+	<div id="header" class="w3-container w3-flat-carrot"> <!--header content-->
+		<h1>Question 1</h1> <!--what is in the header-->
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Put Question 1 content here.</p>    
-    	</div>
+        <p>Is the spot on your asymmetrical?</p> <!--Question that is printed-->
+		<a href="#two" onclick="cancerAdd();" class="w3-btn w3-black"> Yes</a> <!--The buttons that will keep track of the yes's and no's to calculate the probability of whether the person has skin cancer or if it is just a skin spot--> 
+         	<a href="#two" onclick="spotAdd();" class="w3-btn w3-black">No</a>
+   
+    	</div> <!--content --> 
 </div>
 
 <div class="page" id="two">
