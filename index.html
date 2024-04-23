@@ -45,18 +45,17 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
   alert("This file last modified " + docMod); // generates alert box with time stamp.
   console.log("This file last modified  " + docMod); // displays last modified date and time in the javascipt browser console 
 
-        var allergy_count = 0;
-        var cold_count = 0;
+        var cancer_count = 0;
+        var spot_count = 0;
 
 
-        function allergyAdd(){
-            allergy_count = allergy_count + 1;
-		alert(allergy_count);
+        function cancerAdd(){
+            cancer_count = cancer_count + 1;
 
         }
 
-        function coldAdd(){
-            cold_count = cold_count + 1;
+        function spotAdd(){
+            spot_count = cold_count + 1;
 
 	}
 
@@ -94,23 +93,25 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	<p>Do you have a mysterious spot on your skin and wonder if it is cancerous? Answer a few short questions to find out.</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
-	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
 <div class="page" id="one">
 
-	<div id="header" class="w3-container w3-flat-amethyst">
+	<div id="header" class="w3-container w3-flat-amethyst"> <!--header content-->
 		<h1>Question 1</h1>
 	</div>
 
-    	<div id="content" class="w3-container">
-        <p>Put Question 1 content here.</p>    
-    	</div>
+    	<div id="content" class="w3-container"> 
+        <p>Is the spot on your skin asymmetrical?</p> <!--Question that is printed-->
+		<a href="#two" onclick="cancerAdd();" class="w3-btn w3-black"> Yes</a> <!--The buttons that will calculate the probability of whether the person has skin cancer or if it is just a skin spot--> 
+         	<a href="#two" onclick="spotAdd();" class="w3-btn w3-black">No</a>
+    	</div><!--content --> 
 </div>
 
 <div class="page" id="two">
