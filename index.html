@@ -113,9 +113,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
          	<a href="#two" onclick="spotAdd();" class="w3-btn w3-black">No</a>
 
 		<marquee behavior="scroll" direction="down">
-            <img src="https://miiskin.com/wp-content/uploads/mole-and-melanoma-asymmetry-difference.jpg "
-                 alt="asymmetrical image">
-        </marquee>
+          		  <img src="https://miiskin.com/wp-content/uploads/mole-and-melanoma-asymmetry-difference.jpg "
+              		       alt="asymmetrical image">
+        	</marquee>
 		
     	</div><!-- page content --> 
 </div>
@@ -129,6 +129,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<p>Does the skin spot have a poorly defined border?</p> <!--Displays Question 2 on page 2-->
 		<a href="#three"  onclick="cancerAdd();" class="w3-btn w3-black"> Yes</a> <!--creates a button that runs cancerAdd() function and adds 1 to cancer count when clicked which leads to page 3-->
 	<a href="#three"  onclick="spotAdd();" class="w3-btn w3-black">No</a> <!--creates a button that runs spotAdd() function and adds 1 to spot count when clicked which leads to page 3-->
+	
+		<marquee behavior="scroll" direction="down">
+          		  <img src="https://content.ca.healthwise.net/resources/13.7/en-ca/media/medical/hw/h9992562_002.jpg"
+              		       alt="border image">
+        	</marquee>
+
 	</div> <!--divides page-->
 </div> <!--divides page-->
 	
@@ -140,6 +146,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<p>Is your skin spot multicolored? </p> <!--displays Question 3 on page 3-->
          	<a href="#four"  onclick="cancerAdd();" class="w3-btn w3-black">Yes</a> <!--creates a button that runs cancerAdd() function and adds 1 to cancer count when clicked which leads to page 4-->
 		<a href="#four"  onclick="spotAdd();" class="w3-btn w3-black"> No</a> <!--creates a button that runs spotAdd() function and adds 1 to spot count when clicked which leads to page 4-->
+	
+		<marquee behavior="scroll" direction="down">
+          		  <img src="https://m4b6f3p8.rocketcdn.me/app/uploads/2021/04/melanoma_42350_lg.jpg"
+              		       alt="multicolored image">
+        	</marquee>
+		
 	</div> <!--divides page-->
 </div> <!--divides page-->
 	
@@ -152,7 +164,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         <p>Is it greater than 6mm (about the size of a pencil eraser)? </p> <!--Question that is printed-->
 		<a href="#five" onclick="cancerAdd();" class="w3-btn w3-black"> Yes</a> <!--The buttons that will calculate the probability of whether the person has skin cancer or if it is just a skin spot--> 
          	<a href="#five" onclick="spotAdd();" class="w3-btn w3-black">No</a>
-    	</div><!--page content --> 
+    		<marquee behavior="scroll" direction="down">
+          		  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgnVZUtDS_ZQTdmDHd7gm1a3xUhFazxWjhm7rdTJC68w&s"
+              		       alt="size image">
+        	</marquee>
+		
+	</div><!--page content --> 
 </div> <!--divides page-->
 
 <div class="page" id="five">
@@ -164,6 +181,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         <p>Is it changing in shape, size, or color?</p> <!--Question that is printed-->
 		<a href="#six" onclick="cancerAdd();" class="w3-btn w3-black"> Yes</a> <!--The buttons that will calculate the probability of whether the person has skin cancer or if it is just a skin spot--> 
          	<a href="#six" onclick="spotAdd();" class="w3-btn w3-black">No</a>
+	
+		<marquee behavior="scroll" direction="down">
+          		  <img src="https://content.healthwise.net/resources/14.0/en-us/media/medical/hw/h9992562_005.jpg"
+              		       alt="changing image">
+        	</marquee>
+		
     	</div><!-- page content --> 
 </div> <!--divides page-->
 	
@@ -180,7 +203,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 			var cancerPercent = 100*(cancer_count/5); // variable that calculates cancer probability. Denominator is 5 since we have 5 questions. 
 			var spotPercent = 100*(spot_count/5); // variable that calculates skin spot probability
 			var resultText = document.getElementById("results"); // variable that stores results text
-			resultText. innerHTML = "Probability it is skin cacner = " + cancerPercent + "%" + "<br> Probability it is just a skin spot = " + spotPercent + "%";
+			resultText. innerHTML = "Probability it is skin cancer = " + cancerPercent + "%" + "<br> Probability it is just a skin spot = " + spotPercent + "%";
 			} // text that pops up in results paragraph when you click button, added & in quotation marks to see percent symbol after number
 		</script>
 	</div>
