@@ -25,7 +25,7 @@ Brief Description of Goal of Code:
 The goal of the code is to diangose skin cancer based upon the analysis of an image to find the color red on the skin. It will also ask input questions that will be responded to by the individual, giving two forms of input for the user to utilize in order to diagnose for skin cancer.
  
 Known Issues:
-blah, blah, blah, blah
+None
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
@@ -41,8 +41,16 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
+<<<<<<< HEAD
         var cancer_count = 0;
         var spot_count = 0;
+=======
+  var docMod = document.lastModified; // gets last modified date and time of the index.html file
+  alert("This file last modified " + docMod); // generates alert box with time stamp.
+  console.log("This file last modified  " + docMod); // displays last modified date and time in the javascipt browser console 
+        /* var allergy_count = 0;
+        var cold_count = 0;
+>>>>>>> 8cf53b7252c1f32bebd0ce78abd514d10463fc12
 
 
         function cancerAdd(){
@@ -51,9 +59,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         }
 
+<<<<<<< HEAD
         function spotAdd(){
             spot_count = cold_count + 1;
         }
+=======
+        function coldAdd(){
+            cold_count = cold_count + 1;
+        } */
+>>>>>>> 8cf53b7252c1f32bebd0ce78abd514d10463fc12
 
   </script>
 
@@ -72,7 +86,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     left: -100vw;
     overflow-y: auto;
     z-index: 0;
-    background-color: hsl(0,0%,100%);
+    background-color: hsl(268,50%,85%);
 }
 
   .page:target {
@@ -82,7 +96,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </style>
 
 <body>
-<div id="header" class="w3-container w3-flat-carrot">
+<div id="header" class="w3-container w3-flat-amethyst">
 	<h1>Cold or Allergies?</h1>
 </div>
 	
@@ -95,9 +109,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
+<<<<<<< HEAD
 <div class="page" id="one"> <!-- contains page content--> 
 	<div id="header" class="w3-container w3-flat-carrot"> <!--header content-->
 		<h1>Question 1</h1> <!--what is in the header-->
+=======
+<div class="page" id="one">
+	<div id="header" class="w3-container w3-flat-amethyst">
+		<h1>Question 1</h1>
+>>>>>>> 8cf53b7252c1f32bebd0ce78abd514d10463fc12
 	</div>
 	
     	<div id="content" class="w3-container">
@@ -109,7 +129,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>
 
 <div class="page" id="two">
-	<div class="w3-container w3-flat-carrot">
+	<div class="w3-container w3-flat-amethyst">
 		<h1>Question 2</h1>
 	</div>
 	
@@ -118,7 +138,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 </div>	
 
-<footer class="w3-bottom w3-container w3-flat-carrot">
+<footer class="w3-bottom w3-container w3-flat-amethyst">
 	<p>DIY!</p>
 </footer>
 
