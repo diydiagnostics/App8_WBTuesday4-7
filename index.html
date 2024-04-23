@@ -181,10 +181,18 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 <div id="content" class="w3-container"> <!-- intro question -->
 	<p>Do you have a mysterious spot on your skin and wonder if it is cancerous? Answer a few short questions to find out.</p>
-	
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a> <!-- get started button launches question page-->	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+
+<div class="page" id="zero"> <!-- creates new page for Question 0 -->
+
+	<div id="header" class="w3-container w3-flat-amethyst"> <!--header content-->
+		<h1>Question 1</h1>
+	</div>
+
+    	<div id="content" class="w3-container"> 
 
 <!-- image analysis -->
       <h2>Push button to take picture.</h2>
@@ -214,13 +222,23 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
       </script>
 	
 <!-- end of image analysis section -->
+		
+        <p>Did the processed image show red on the concerned spots?</p> <!--Question that is printed-->
+		<a href="#one" onclick="cancerAdd();" class="w3-btn w3-black"> Yes</a> <!--The buttons that will calculate the probability of whether the person has skin cancer or if it is just a skin spot--> 
+         	<a href="#one" onclick="spotAdd();" class="w3-btn w3-black">No</a> <!--The buttons that will calculate the probability of whether the person has skin cancer or if it is just a skin spot--> 
 
-<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a> <!-- get started button launches question page-->
+		<marquee behavior="scroll" direction="down"> <!--calls marquee tag, modifiers tell image to scroll down-->
+          		  <img src="https://miiskin.com/wp-content/uploads/mole-and-melanoma-asymmetry-difference.jpg " 
+              		       alt="asymmetrical image">
+        	</marquee> <!--above two lines link image address, then give it an alt name-->
+		
+    	</div><!-- page content --> 
+</div>
 	
 <div class="page" id="one"> <!-- creates new page for Question 1 -->
 
 	<div id="header" class="w3-container w3-flat-amethyst"> <!--header content-->
-		<h1>Question 1</h1>
+		<h1>Question 2</h1>
 	</div>
 
     	<div id="content" class="w3-container"> 
@@ -238,7 +256,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <div class="page" id="two"> <!--creates new page for Question 2-->
 	<div class="w3-container w3-flat-amethyst"> <!--creates orange header box-->
-		<h1>Question 2</h1> <!--displays "Question 2" as the header"-->
+		<h1>Question 3</h1> <!--displays "Question 2" as the header"-->
 	</div> <!--ends header box-->
 	
 	<div id="content" class="w3-container"> <!--creates white page background-->
@@ -256,7 +274,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 <div class="page" id="three"> <!--creates new page for Question 3-->
 	<div class="w3-container w3-flat-amethyst"> <!--creates orange header box-->
-		<h1>Question 3</h1> <!--displays "Question 3" as the header-->
+		<h1>Question 4</h1> <!--displays "Question 3" as the header-->
 	</div> <!--ends header box-->
 	<div id="content" class="w3-container"> <!--creates white page background-->
 	<p>Is your skin spot multicolored? </p> <!--displays Question 3 on page 3-->
@@ -274,7 +292,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <div class="page" id="four">
 
 	<div id="header" class="w3-container w3-flat-amethyst"> <!--header content-->
-		<h1>Question 4</h1>
+		<h1>Question 5</h1>
 	</div>
     	<div id="content" class="w3-container"> 
         <p>Is the skin spot greater than 6mm (about the size of a pencil eraser)? </p> <!--Question that is printed-->
@@ -292,7 +310,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <div class="page" id="five">
 
 	<div id="header" class="w3-container w3-flat-amethyst"> <!--header content-->
-		<h1>Question 5</h1>
+		<h1>Question 6</h1>
 	</div>
     	<div id="content" class="w3-container"> 
         <p>Is the skin spot changing in shape, size, or color?</p> <!--Question that is printed-->
@@ -317,8 +335,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<script> // contains javascript content for getResults function
 			function getResults () // function that makes results with probabilities appear in results paragraph
 			{
-			var cancerPercent = 100*(cancer_count/5); // variable that calculates cancer probability. Denominator is 5 since we have 5 questions. 
-			var spotPercent = 100*(spot_count/5); // variable that calculates skin spot probability
+			var cancerPercent = 100*(cancer_count/6); // variable that calculates cancer probability. Denominator is 5 since we have 5 questions. 
+			var spotPercent = 100*(spot_count/6); // variable that calculates skin spot probability
 			var resultText = document.getElementById("results"); // variable that stores results text
 			resultText. innerHTML = "Probability it is skin cancer = " + cancerPercent + "%" + "<br> Probability it is just a skin spot = " + spotPercent + "%";
 			} // text that pops up in results paragraph when you click button, added & in quotation marks to see percent symbol after number
